@@ -23,6 +23,7 @@ export class AppUpdater extends EventEmitter {
 
     autoUpdater.allowDowngrade = false;
     autoUpdater.allowPrerelease = true;
+    autoUpdater.autoInstallOnAppQuit = true;
 
     autoUpdater.on('error', this.onError.bind(this));
     autoUpdater.on('checking-for-update', this.onCheckingForUpdate.bind(this));
